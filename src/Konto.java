@@ -1,27 +1,20 @@
 
 public class Konto {
 
-	private long kontonummer;
-	private double kontostand;
+	protected String kontonummer;
+	protected double kontostand;
 	
-	public Konto(long kontonummer, double kontostand) {
+	public Konto(String kontonummer, double kontostand) {
 		this.kontonummer = kontonummer;
 		this.kontostand = kontostand;
 	}
-	
-	public long getKontonummer() {
-		return kontonummer;
+
+	public void kontoInfo() {
+		System.out.printf(" %-15s %-15s", "Kontonummer", "Kontozustand");
+		System.out.println();
+		System.out.printf(" %-15s %-15s", kontonummer, kontostand);
+		System.out.println();
+		System.out.println();
 	}
-	public void setKontonummer(long kontonummer) {
-		this.kontonummer = kontonummer;
-	}
-	public double getKontostand() {
-		return kontostand;
-	}
-	public void setKontostand(double kontostand) {
-		this.kontostand = kontostand;
-	}
-	
-	
 	
 }
